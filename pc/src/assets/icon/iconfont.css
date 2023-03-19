@@ -1,0 +1,49 @@
+@font-face {font-family: "fontFamily";
+  src: url('iconfont.eot?t=1547866954512'); /* IE9 */
+  src: url('iconfont.eot?t=1547866954512#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAg8AAsAAAAAD6AAAAfuAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDXgqRII0MATYCJAMcCxAABCAFhQUHgRYbsgwjEfaDkwKR/fPAdkTPSkkoPtdTWC+69Z8NNp3ujqT/nA//bevPvZMOZoNdY2wBVhArZm1EoRvRgfsyvkiAgLQhNxanzWkfYEWMrh/m9FljNCusF9BW1PQTsbhmpwcoTNTkkZyl9+h7XXKUNsXBz9/v1R+Fxb2dVQJNbIQv6iy6797SKiiTp+OopvfBBlg217HMyjZZTBPHpDc1fZbHgQCQ4I9okKycolKIYMHiCDr079OrEeIgHeyGhUBM4hcuZUEWgINIZ9I7AObbnyc/IpGIAAXHgJ2qb8tugdoid85hzFYzarQK3PlyAYR7AQyAaABsmDhtMcUMxJPcxkDanUUpAHuIoODxi5YlljWWM5ZHnXOsVhj2ZPMJ7DnjdqdgwIIDH//xeHjxtkis8Bp4wCLLECCAZUkIUMCyJgQYwHImBFjA8igEOKBzTgLeqlY42h5AIEDvAYzs6JPPY6AACwEMeD97e5alERtO4VSJpeq8cugLaiuP6B9MkbIS0PKr4tWsBry+5WAUXAvhjV8Ip8IB1a+F0UHwdlXu6tWg6KlQ9Ycym6P6Ku9J0WEIQ7/wZ1RS9JcUPvV9IpcA/FQVLy+pC//mlcWhhvjwNAJGQrhG+ciECKVePHs9CHjuQUSvV9UDHwD4AYzN7pbRWZGCLMYk5krENF0ESqVmOTehVI5m2ZnU1m1JzySCQDg9A2+j6euS+XUuuT1oozNPl8rZnth1bskEZpZMRWqIkgHNbyVJzBCNqeozv1G3MjAWCNa0CWUgCu5h5eoLOzsHJ5kJZjWbB3Pl7B5ICkSZQTggJCaKxiS6/eeV/QxtPPO6qQidIGVHknshXNIyfZwBmSld3KvTgwpv7pXv5QNDVMrcIH9qQD3ItL3cab5E4TjNEvD8JxUap2V09zHN2eocc+Y7ZhfLq2WztyX3fgHCM8IMJBqHpy9AR+ZSMrP3Qj4tY04WpTxPxXN6zCOo5u5Vhi3Obp3ZyeSVh6wkb8Crd4jhA3vBzM4mzDUNygPVzZ8Khj2Ps20IFKzpNpEydb1K9dFVTpveLpn2cpKdYDCBSXPtEsvvCveO7p6Vl0UNR5TB28gT8+iLuCOgTp5cvabWLnCWhYCMCEE5OKuRIbY0U4py/ukvhhK1paVE2JG3e/KMqNILJovPqYKe4n8vmCo8s6QiPv9Ey7qmONjFD7uZ/wQau7bl3aYZtXyk00R4jb8cs/ZojuxW3BTZwzSkhJTI0bk9o5IvVORcDz+uuj5I0oWuiZZJybziPkePmWL6oFR1zdGhri5jZm0GVdsNcsKxclUfmGKOuRNNbbfcTNRF10KmHy6wo94rAVh1ZpV5g5TVz1fZO/nyKZUH2zvCur6HdcMHXMCHDcpJGwBsGKL8il0Gnl9ZZb7wR1tvlUO01U/6Y5r6sH8cnDwrL81p5FNiHXjmdNAAtcPFCeqKhwPsgwTjNXWEgWaH/NMkyIMvJse3PxTLdaeTCCPmZEQe3GI7aNGOgOiY+Ox9R2ZsSCZj/nKJfHQ7scLOlRVOZlekSTauQSMS3XRxbHB+aotnnp4ZOdRVUIWo3X3kSmVp31uio6DKCbpNEZ/zx4TNQ4jpSy/sIlV5g9vPfeswJPMKMYm3IVxTz8DkvGWOytSW4BCPwZeuajx9onwy+ucGXpc/OAihVZnCDtFuveMGl7JzU9aqnRMSNmwPltRKgfFZZGYzE9odPflcI5PdQZ1AWS7A62znibwYvd5O3PFYnpkiOdotPqzZSuQfHey9lXXVmt5zRPOXfi7pG12dCc+EmhofDUnx3OD4ad/JZUERv3if9XYUG2xczO3tNDMhXfSO22vksjs6FgTZ8k62IdcPVEp720wrseQnaLJyvgVt7GPKgJbpV7VbTsO1yaOkqRRkpjdbqMsnUKJAl+I9k4BOlUZOvo40eXdVPwbaDFOfjUH/yK+KE3qYe6iP/bPGpXybTlr8aDP9pK+921akcDic19DoB/Duj4OHx40JsSFAq0vEmd/Cb2ciXFoBSO4r46a4PHF3B4lp1Of1z1H6FrXdrdV/opsvbZZ0y8oxRzZuehb8zIlwzemacfPT4KdUs+uAdVpvrbxUXqbx1mCP08fizxqMgvH/UQed9feI4YpmrfKa81XD5qchT5HoTGyh+XtEenI6WmkijiWcMRY4+lS1f48cJg0Df2YKSc8gaedz0pLTVIUWE8EqGTNDbEzYLtBNcjW9AFitS9yu5jDEuuX/Vu/Q9W8R/v2se9H7SIFXbrWyzpcvgvpxJGF2LBxxBFsILENgs/4lS/QRSB4UtRSAxMcBu5NiZ7w7X6IbmdGFEtw6oBCgBAYSQtWsPh44KJABPCRkg4Qo6K5WwAVjwYCwNgAiMdcBAlccBwp73KZQ6IqXULP6n4GDOyHAw5UsJ8HCf9W3XDolLy4BVcIHdB8YtVgSaWmhPndXZuTPN/aZVRj1aD7zjyGOYqEp65mmL7QYznVGfPZtSgQUxMB9+2nILOCCTKhTOaTkzlVFS2eWWkyxcBEgJenAD6DziT7ShEXFyaK5y51ijNjHN9TL0dJK2Ox3Sv5DQQSzvHnQKNUk9Ve8JfZ5b2T01GuL2oRAjsG1GMCdA7GQMwHcMk4u6jC/NBxR65xVfCyixpdPnWh+cwQGwN4rRAlDWMIRnghExGaJncgsOfFosR+bx5jsgxhU7zZwKI4je4hijz5G0aPiLhNhSNKKAgA=') format('woff2'),
+  url('iconfont.woff?t=1547866954512') format('woff'),
+  url('iconfont.ttf?t=1547866954512') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1547866954512#fontFamily') format('svg'); /* iOS 4.1- */
+}
+
+.fontFamily {
+  font-family: "fontFamily" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* [class^="el-icon-xudalong"], [class*=" el-icon-xudalong"] {
+    font-family:"fontFamily" !important;
+    font-size: 18px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+} */
+
+.el-icon-xu-iosbookoutline:before {
+  content: "\e736";
+}
+
+.el-icon-xu-ioslistoutline:before {
+  content: "\e794";
+}
+
+.el-icon-xu-ioshomeoutline:before {
+  content: "\e79c";
+}
+
+.el-icon-xu-iospeopleoutline:before {
+  content: "\e7bc";
+}
+
+.el-icon-xu-iospersonoutline:before {
+  content: "\e7d2";
+}
+
+.el-icon-xu-socialbufferoutline:before {
+  content: "\e88c";
+}
+

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>企业OA后台管理系统</title>
+
+  <script src="https://cdn.staticfile.org/vue/2.6.10/vue.min.js"></script>
+  <script src="https://cdn.staticfile.org/vue-router/3.0.4/vue-router.min.js"></script>
+
+  <link href="https://cdn.staticfile.org/element-ui/2.8.2/theme-chalk/index.css" rel="stylesheet">
+  <script src="https://cdn.staticfile.org/element-ui/2.8.2/index.js"></script>
+</head>
+
+<body>
+
+
+  <script>
+    
+    
+    window.conf = {
+      version: '2.0.13',
+      thirdPlatform: 'dingtalk',
+      flowReSendLimit: 1
+    }
+
+    window.baseURL = '';
+
+    window.tabel_api = window.baseURL + '/api/oa/table/set';
+    window.callback_default_api = window.baseURL + '/api/oa/tablefun/callback';
+    window.customlist_api = window.baseURL + '/api/oa/formcustomlist';
+    window.defaultValue_format_api = window.baseURL + '/api/oa/defaultValue_format';
+
+
+    window.env = {
+      prod: {
+        HeaderTokenKey: 'X-Token',
+        postTokenKey: '_employeetoken',
+        CookieTokenKey: 'Admin-Token'
+      },
+      
+      test: {
+        HeaderTokenKey: 'X-Token-Test',
+        postTokenKey: '_employeetoken_test',
+        CookieTokenKey: 'Admin-Token-Test'
+      },
+      
+      replace_emp: {
+        HeaderTokenKey: 'X-Token-REEMP',
+        postTokenKey: '_replaceemployeetoken',
+        CookieTokenKey: 'Admin-Token-REEMP'
+      }
+    }
+    window.envname = 'prod';
+    
+    
+
+    switch (window.envname) {
+      case 'test':
+        window.oaname = 'oatest';
+        break;
+      case 'prod':
+        window.oaname = 'oa';
+        break;
+      case 'replace_emp':
+        window.oaname = 'replace_emp';
+        break;
+      default:
+        break;
+    }
+
+
+
+
+    window.AddRouters = [
+
+      {
+        path: '',
+        component: 'Layout',
+        redirect: 'dashboard',
+        name: 'oa流程',
+        meta: {
+          title: 'oa流程',
+          icon: 'home'
+        },
+        children: [
+          {
+
+            path: 'dashboard',
+            component: 'oa/flow/workbench',
+            name: 'dashboard',
+            meta: { title: '工作流工作台', icon: 'home', noCache: false }
+          },
+          {
+            hidden: true,
+            path: 'flowdeal',
+            component: 'oa/flow/FlowDealer',
+            name: 'flowdeal',
+            meta: {
+              title: '处理流程'
+            }
+          },
+          {
+            hidden: true,
+            path: 'flowadmin/:id',
+            component: 'oa/flow/FlowAdmin',
+            name: 'flowadmin',
+            meta: {
+              title: '管理流程'
+            },
+
+          },
+          {
+            hidden: true,
+            path: 'flowdetail',
+            component: 'oa/flow/FlowDetail',
+            name: 'flowdetail',
+            meta: {
+              title: '查看oa流程'
+            }
+          },
+          {
+            path: 'flow/timeout/log',
+            component: 'oa/flow/FlowTimeoutLog',
+            name: 'flow_timeout_log',
+            meta: { title: '流程超时日志', icon: 'list', noCache: true, roles: ['flow.timeout.log'] }
+          },
+          {
+            path: 'flow/timeout/summary',
+            component: 'oa/flow/FlowTimeoutSummary',
+            name: 'flow_timeout_summary',
+            meta: { title: '流程超时汇总', icon: 'chart', noCache: true, roles: ['flow.timeout.summary'] }
+          },
+          {
+            path: 'flow/see_employee',
+            component: 'oa/flow/FlowSeeEmployee',
+            name: 'flow_see_employee',
+            meta: { title: '查看员工消息', icon: 'tree', noCache: true, roles: ['oa.replace_emp'] }
+          }
+        ]
+      },
+
+      {
+        path: '/contacts',
+        component: 'Layout',
+        redirect: '/contacts/contacts',
+        name: 'contacts',
+        meta: {
+          title: '通讯录管理',
+          icon: '部门管理'
+        },
+        children: [
+          {
+
+            path: 'contacts',
+            component: 'contacts/contacts',
+            name: 'contacts.contacts',
+            meta: { title: '内部通讯录管理', icon: '通讯录', noCache: true, roles: ['dd.import'] }
+          },
+          {
+            path: 'deptManage',
+            component: 'contacts/deptManage',
+            name: 'contacts.deptManage',
+            meta: { title: '部门管理', icon: '', noCache: true, roles: ['dept.list'] }
+          }
+        ]
+      },
+
+      {
+        path: '/oaset',
+        component: 'Layout',
+        name: 'oaset',
+        meta: {
+          title: 'oa系统管理',
+          icon: 'example',
+        },
+        children: [
+          {
+            path: 'flowdesign_add',
+            component: 'oa/flowdesign/flowdesign.edit',
+            name: 'flowdesign_add',
+            meta: { title: '添加新的流程', icon: 'add', noCache: true, roles: ['flowdesign.add'] }
+          },
+          {
+            path: 'flowdesign_list',
+            component: 'oa/flowdesign/flowdesign.chose',
+            name: 'flowdesign_list',
+            meta: { title: '已创建的流程', icon: 'list', noCache: false, roles: ['flowdesign.list'] }
+          },
+          {
+            path: 'flowdesign_category',
+            component: 'oa/flowdesign/flowdesign.category',
+            name: 'flowdesign_category',
+            meta: { title: '分类管理', icon: 'tree', noCache: false, roles: ['flowdesign.setcat'] }
+          },
+          {
+            hidden: true,
+            path: 'flowdesign_edit/:id',
+            component: 'oa/flowdesign/flowdesign.edit',
+            name: 'flowdesign_edit',
+            meta: { title: '编辑流程', icon: 'dashboard', noCache: true, roles: ['flowdesign.edit'] }
+          },
+          {
+            hidden: true,
+            path: 'flowdesign_edit_senior/:idlist',
+            component: 'oa/flowdesign/flowdesign.edit_senior',
+            name: 'flowdesign_edit_senior',
+            meta: { title: '高级流程编辑', icon: 'dashboard', noCache: true, roles: ['flowdesign.editsenior'] }
+          }
+        ]
+      },
+      {
+        path: '/employee',
+        component: 'Layout',
+        redirect: '/employee/admin',
+        name: 'employee',
+        meta: {
+          title: '员工管理',
+          icon: 'user'
+        },
+        children: [
+          {
+            path: 'employee/dd/deleteuser/list',
+            component: 'iframe/iframebox',
+            props: { url: '/employee/dd/deleteuser/list' },
+            name: 'employee.dd.deleteuser',
+            meta: { title: '钉钉需删除员工', roles: ['dd.deleteuser.delete', 'dd.deleteuser.list'], icon: 'user', noCache: false }
+          },
+          {
+            path: 'employee/dd/deleterole/list',
+            component: 'iframe/iframebox',
+            props: { url: '/employee/dd/deleterole/list' },
+            name: 'employee.dd.deleterole',
+            meta: { title: '钉钉需删除角色', roles: ['dd.deleterole.delete', 'dd.deleterole.list'], icon: 'user', noCache: false }
+          },
+
+          {
+            path: 'employee/dd/deleterolegroup/list',
+            component: 'iframe/iframebox',
+            props: { url: '/employee/dd/deleterolegroup/list' },
+            name: 'employee.dd.deleterolegroup',
+            meta: { title: '钉钉需删除角色组', roles: ['dd.deleterolegroup.delete', 'dd.deleterolegroup.list'], icon: 'user', noCache: false }
+          },
+
+          {
+            path: 'employee/dd/deletedept/list',
+            component: 'iframe/iframebox',
+            props: { url: '/employee/dd/deletedept/list' },
+            name: 'employee.dd.deletedept',
+            meta: { title: '钉钉需删除部门', roles: ['dd.deletedept.delete', 'dd.deletedept.list'], icon: 'user', noCache: false }
+          },
+        ]
+      },
+   ];
+
+    if(window.envname=='replace_emp'){
+      window.AddRouters.push(    {
+        path: '/replace_employee',
+        component: 'oa/flow/workbench.employee',
+        name: 'replace_employee',
+        meta: {
+          roles: ['oa.replace_emp']
+        },
+      });
+    }
+
+
+  </script>
+
+  <div id="app"></div>
+  <script>
+  </script>
+
+</body>
+
+</html>
+
+<style>
+</style>

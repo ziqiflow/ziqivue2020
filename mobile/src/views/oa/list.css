@@ -1,0 +1,172 @@
+.label {
+    border-radius: 4px;
+    color: white;
+    padding: 1px 3px;
+    display: inline-block;
+}
+
+.label.success {
+    /* background-color: #19be6b */
+    color: #51596f;
+    /* border: 1px #51596f solid; */
+}
+
+.label.emergency_label{
+    background-color: #ff3d00;
+    color: white;
+    line-height: 17px
+}
+
+.label.warning {
+    /* background-color: #ff9900; */
+    /* background-color: #67c23a */
+    background-color: #03A9F4;
+}
+
+
+.emergency_row{
+    background: #ffe598 !important;
+    color: #5a5a5a;
+}
+
+/* .label {
+    border-radius: 4px;
+    color: black;
+    padding: 3px 3px;
+    display: inline-block;
+}
+.label.success {
+    color: #19be6b;
+    border: 1px #19be6b solid;
+
+}
+.label.warning {
+    color: #ff9900;
+    border: 1px #ff9900 solid;
+} */
+
+.person {
+    border-radius: 4px;
+    color: #4a4a4a;
+    padding: 0px 2px;
+    display: inline-block;
+    /* background-color: #8c949a; */
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.msglist{
+position: relative;
+    padding: 5px 15px 12px 25px;
+    line-height: 20px;
+    margin:10px 0;
+    border-bottom: 1px solid #e4e5e6;
+}
+
+.time{
+  position:absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 12px;
+}
+
+.headerTitle{
+  font-size: 14px;
+  font-weight: bold;
+}
+.descTitle{
+    margin-top: 5px;
+ font-size: 13px;
+}
+.created_at{
+  font-size: 12px;
+}
+.detail{
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.workname{
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+.arrow-right{
+  position:absolute;
+top: 43%;
+    right: 10px;
+}
+
+.headerhandle {
+    position: relative;
+}
+
+.pilian {
+    position: absolute;
+    font-size: 13px;
+    top: 16px;
+    left: 10px;
+}
+
+.v-search {
+    background-color: #f2f2f2;
+    padding-left: 46px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 95%;
+    padding: 10px;
+    /* margin: 10px; */
+    border-top: 1px solid #c5c5c5;
+    background-color: white;
+}
+
+.el-checkbox__inner {
+    border-radius: 50%;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner {
+    border-radius: 50%;
+}
+
+.msglist .main {
+    position: relative;
+}
+
+.msglist .main.editmode {
+    margin-left: 30px;
+}
+
+.msglist .hasread {
+    position: absolute;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    /* background-color: #409eff; */
+    background-color: #FF9800;
+    left: -14px;
+}
+
+.msglist .checkbox {
+    position: absolute;
+    top: 40%
+}
+
+.shaixuan{
+    position: absolute;
+    font-size: 13px;
+    top: 11px;
+    right: 8px;
+}
+
+.shaixuanBox .el-radio-button--small .el-radio-button__inner {
+    padding: 9px 25px;
+}
+
+.shaixuanBox{
+    text-align: center;padding: 6px 0px 8px;background-color: aliceblue;
+}
